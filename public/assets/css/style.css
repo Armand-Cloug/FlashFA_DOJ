@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* ✅ Styles généraux */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; /* Pas de scroll global */
+    display: flex;
+    background-color: #0D1424; /* Bleu foncé profond */
+    color: white;
+}
+
+/* ✅ Gestion des listes */
+ul {
+    font-weight: normal;
+}
+
+.special-ul{
+    font-size: 125%;
+}
+
+/* ✅ Barre de recherche */
+#searchBar {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    position: center;
+}
+
+/* ✅ Cache les sections par défaut */
+.hidden {
+    display: none !important;
+}
+
+/* ✅ Ajustement du conteneur principal */
+.main-content {
+    width: 100vw; /* Compense la largeur de la navbar */
+    padding: 20px 40px;
+    height: 100vh;
+    overflow: hidden; /* Désactive le scroll global */
+    flex-direction: column;
+    display: flex;
+}
+
+/* ✅ Titre principal */
+.main-content h1 {
+    display: flex; /* Aligne les divs en ligne */
+    gap: 20px; /* Espacement entre les divs */
+    width: 100vw; /* Prend toute la largeur */
+}
+
+.details {
+    word-break: break-word;
+    white-space: normal;
+    max-width: 40%;
+}
+
+/* CONTAINER */ 
+
+/* ✅ Section contenant les cartes (Avec scrollbar interne !) */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 100vh; /* Définit une hauteur max pour que le scroll reste dans la div */
+    overflow-y: auto; /* Active uniquement le scroll interne */
+    padding-right: 10px; /* Ajoute un espace pour éviter que la scrollbar ne cache le texte */
+    padding-bottom: 10px;
+    margin-bottom: 10vh;
+}
+
+/* ✅ Personnalisation de la scrollbar */
+.section-container::-webkit-scrollbar {
+    width: 8px; /* Largeur fine et élégante */
+}
+
+.section-container::-webkit-scrollbar-track {
+    background: #1C2333; /* Fond de la scrollbar */
+    border-radius: 10px;
+}
+
+.section-container::-webkit-scrollbar-thumb {
+    background: #3A4A6B; /* Bleu stylisé pour la barre */
+    border-radius: 10px;
+}
+
+.section-container::-webkit-scrollbar-thumb:hover {
+    background: #2A3A5B; /* Légèrement plus clair au survol */
+}
+
+/* ✅ Conteneur du tableau avec scroll */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 100vh; /* Définit une hauteur max pour que le scroll reste dans la div */
+    overflow-y: auto; /* Active uniquement le scroll interne */
+    padding-right: 10px; /* Ajoute un espace pour éviter que la scrollbar ne cache le texte */
+    padding-bottom: 10px;
+    margin-bottom: 10vh;
+}
+
+/* ✅ Personnalisation de la barre de scroll */
+.table-container::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre */
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #2A3A5B; /* Couleur de fond */
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #1E40AF; /* Bleu vif */
+    border-radius: 10px;
+    border: 3px solid #2A3A5B; /* Bordure */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #162D6B; /* Bleu foncé */
+}
+
+/* CARD */
+
+/* ✅ Style général des cartes */
+.card, .card-img, .card-todo {
+    background-color: #1C2333; /* Fond par défaut */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* ✅ Style spécifique au survol */
+.card:hover, .card-img:hover, .card-todo:hover {
+    background-color: #232B3B; /* Légèrement plus clair au survol */
+}
+
+/* ✅ Cartes avec images */
+.card-img {
+    text-align: center; /* Centre les images horizontalement */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+/* ✅ Spécificités pour .card-todo */
+.card-todo {
+    background-color: #2A3A5B; /* Fond différent */
+    font-weight: normal; /* Moins épais que les autres cartes */
+    margin-top: 20px;
+}
+
+/* BOUTON */
+
+/* ✅ Conteneur des boutons */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* ✅ Boutons de sélection */
+.toggle-btn {
+    background-color: #1C2333;
+    color: white;
+    border: none;
+    padding: 0.8%;
+    border-radius: 8px;
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn.active {
+    background-color: #3A4A6B;
+}
+
+.toggle-btn:hover {
+    background-color: #2A3A5B;
+}
+
+/* ✅ Style des boutons */
+.btn-sommaire {
+    background-color: #2A3A5B;
+    color: white !important;
+    border: none;
+    padding: 0.8%;
+    border-radius: 8px;
+    font-size: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none !important;
+    display: inline-block;
+    margin-top: 0.5%;
+}
+
+/* ✅ Style au survol */
+.btn-sommaire:hover {
+    background-color: #222c3f71;
+    color: white !important;
+    text-decoration: none;
+}
+
+/* ✅ Spécifique aux liens <a> */
+a.btn-sommaire {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* ✅ Bouton Ajouter */
+.btn-add {
+    background-color: #198754;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn-add:hover {
+    background-color: #145c37;
+}
+
+/* ✅ Bouton Voir le lien public */
+.btn-public {
+    display: inline-block;
+    background-color: #1E3A8A;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-public:hover {
+    background-color: #0D1B4C;
+}
+
+/* ✅ Bouton Modifier (visible uniquement pour Admin) */
+.btn-edit {
+    display: inline-block;
+    background-color: #1E3A8A;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-edit:hover {
+    background-color: #162D6B;
+}
+
+/* ✅ Boutons */
+.btn-update {
+    margin-top: 10px;
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #198754;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #145c37;
+}
+
+/* ✅ Bouton Soumettre */
+.btn-submit {
+    background-color: #198754;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #145c37;
+}
+
+/* ✅ Bouton Supprimer (visible pour les grades autorisés) */
+.btn-delete {
+    background-color: #AF1E1E;
+    margin-top: 10px;
+    color: white;
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #6B1616;
+}
+
+.btn-del {
+    display: inline-block;
+    background-color: #AF1E1E;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-delete:hover {
+    background-color: #6B1616;
+}
+
+/* TABLEAU */
+
+/* ✅ Table générale */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1C2333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ✅ En-tête du tableau */
+table thead {
+    background-color: #232B3B;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ✅ Style des colonnes */
+table thead th {
+    padding: 12px;
+    text-align: center;
+    background-color: #2A3A5B;
+}
+
+/* ✅ Lignes du tableau */
+table tbody tr {
+    border-bottom: 1px solid #2D3748;
+    transition: background 0.3s;
+}
+
+table tbody tr:hover {
+    background-color: #232B3B;
+}
+
+/* ✅ Style des cellules */
+table td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ✅ Style du menu déroulant */
+table select,
+table input,
+table textarea {
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ✅ Effet au survol */
+table select:hover {
+    background-color: #0D1B4C;
+}
+
+/* ✅ Effet lorsque l'utilisateur clique */
+table select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.8);
+}
+
+/* ✅ Ajouter une légère marge pour l'espacement */
+table select {
+    margin: 5px 0;
+}
+
+/* IMAGE */ 
+
+/* ✅ Images de profil */
+.acc-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.acc-img-menu {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+/* COULEUR */ 
+
+/* ✅ Couleur des statuts */
+.status.actif {
+    color: green;
+    font-weight: bold;
+}
+
+.status.expiré {
+    color: red;
+    font-weight: bold;
+}
+
+.status.exécuté {
+    color: lightskyblue;
+    font-weight: bold;
+}
+
+/* ✅ Couleur des statuts */
+.status.orange {
+    color: orange;
+    font-weight: bold;
+}
+
+.status.rouge {
+    color: red;
+    font-weight: bold;
+}
+
+.status.noir {
+    color: black;
+    font-weight: bold;
+}
+
+/* PSEUDO BOUTON */ 
+
+/* ✅ Liens de DAC */
+.affaire-link {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.affaire-link:hover {
+    text-decoration: underline;
+}
+
+/* FORM */ 
+
+/* ✅ Personnalisation de la scrollbar uniquement pour .special-form */
+.special-form::-webkit-scrollbar {
+    width: 8px;
+}
+
+.special-form::-webkit-scrollbar-track {
+    background: #2A3A5B; /* ✅ Couleur de fond */
+    border-radius: 8px;
+}
+
+.special-form::-webkit-scrollbar-thumb {
+    background: #1E40AF; /* ✅ Bleu */
+    border-radius: 8px;
+    border: 3px solid #2A3A5B; /* Bordure */
+}
+
+.special-form::-webkit-scrollbar-thumb:hover {
+    background: #162D6B; /* ✅ Bleu plus foncé au survol */
+}
+
+/* ✅ Labels uniquement pour .special-form */
+.special-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ✅ Champs input, select et textarea uniquement pour .special-form */
+.special-form input,
+.special-form select,
+.special-form textarea {
+    width: 98%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background: #232B3B;
+    color: white;
+}
+
+/* ✅ Groupe de checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    background: #232B3B;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+
+/* ✅ Styles du footer */
+.footer {
+    background-color: #0D1424; /* Bleu foncé DOJ */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2%;
+}
+
+/* ✅ Texte centré */
+.footer p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre le texte et le logo */
+}
+
+/* ✅ Logo FlashFA */
+.footer img {
+    height: 20px; /* Taille ajustée pour le logo */
+    vertical-align: middle;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer img:hover {
+    opacity: 1;
+}
+
+/* RESPONCHIANT */ 
+
+/* ✅ Adaptabilité sur petits écrans */
+@media screen and (max-width: 768px) {
+    .main-content {
+        width: 95%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    table tbody {
+        max-height: 50vh;
+    }
+
+    table td {
+        padding: 10px;
+    }
+}
+
+/* NAVBAR */
+
+/* ✅ Importation de la police depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* ✅ Styles généraux de la navbar */
+.sidebar {
+    width: 250px; /* Largeur fixe */
+    height: 100vh; /* Hauteur pleine */
+    background-color: #0B1120; /* Bleu foncé */
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* ✅ Assure que la navbar est au-dessus du contenu */
+    font-family: 'Inter', sans-serif;
+    
+    /* ✅ Permettre le défilement en cas de contenu trop long */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Pour Firefox */
+    scrollbar-color: #1E40AF #0B1120; /* Personnalisation couleur pour Firefox */
+}
+
+/* ✅ Personnalisation de la scrollbar (pour Webkit : Chrome, Edge, Safari) */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #1E40AF; /* Bleu */
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #162D6B; /* Bleu plus foncé au survol */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #0B1120; /* Fond de la scrollbar */
+}
+
+/* ✅ Ajustement du contenu principal pour éviter qu'il ne soit derrière la navbar */
+.main-content {
+    margin-left: 250px; /* ✅ Ajoute un espace égal à la largeur de la navbar */
+    padding: 20px 40px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* ✅ Profil en haut de la navbar */
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    width: 80px; /* Taille du logo */
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.profile-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.profile-section p {
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+/* ✅ Menu */
+.menu {
+    width: 100%;
+    padding: 0;
+}
+
+/* ✅ Style des liens */
+.menu li {
+    width: 100%;
+    list-style: none;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    transition: background 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #1C2333; /* Légèrement plus clair au survol */
+}
+
+/* ✅ Icônes */
+.menu li a i {
+    margin-right: 10px;
+}
+
+/* ✅ Bouton de connexion */
+.login-btn {
+    display: inline-block;
+    background: #1E40AF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #162D6B;
+}
+
+/* ✅ Effet au survol */
+.menu li a:hover {
+    background-color: #1C2333; /* Légèrement plus clair au survol */
+}
+
+/* ✅ Effet pour le menu actif */
+.menu li a.active {
+    background-color: #1C2333; /* Même couleur que le hover */
+    font-weight: bold; /* Optionnel : met le texte en gras */
+}

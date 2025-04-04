@@ -1,0 +1,105 @@
+/* ✅ Fond sombre pour correspondre au design */
+body.reglement-body {
+    background-color: #0D1424; /* Bleu foncé profond */
+    color: white;
+    display: flex;
+}
+
+/* ✅ Ajustement du conteneur principal */
+.main-content {
+    width: calc(100% - 250px); /* Compense la largeur de la navbar */
+    padding: 20px 40px;
+    height: 100vh;
+    overflow: hidden; /* Désactive le scroll global */
+}
+
+/* ✅ Titre principal */
+.main-content h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ✅ Conteneur des boutons */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* ✅ Boutons de sélection */
+.toggle-btn {
+    background-color: #1C2333;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn.active {
+    background-color: #3A4A6B;
+}
+
+.toggle-btn:hover {
+    background-color: #2A3A5B;
+}
+
+/* ✅ Section contenant les cartes (Avec scrollbar interne !) */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 70vh; /* Définit une hauteur max pour que le scroll reste dans la div */
+    overflow-y: auto; /* Active uniquement le scroll interne */
+    padding-right: 10px; /* Ajoute un espace pour éviter que la scrollbar ne cache le texte */
+}
+
+/* ✅ Personnalisation de la scrollbar */
+.section-container::-webkit-scrollbar {
+    width: 8px; /* Largeur fine et élégante */
+}
+
+.section-container::-webkit-scrollbar-track {
+    background: #1C2333; /* Fond de la scrollbar */
+    border-radius: 10px;
+}
+
+.section-container::-webkit-scrollbar-thumb {
+    background: #3A4A6B; /* Bleu stylisé pour la barre */
+    border-radius: 10px;
+}
+
+.section-container::-webkit-scrollbar-thumb:hover {
+    background: #2A3A5B; /* Légèrement plus clair au survol */
+}
+
+/* ✅ Style des cartes */
+.card {
+    background-color: #1C2333; /* Fond plus clair */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* ✅ Effet au survol */
+.card:hover {
+    background-color: #232B3B; /* Légèrement plus clair au survol */
+}
+
+/* ✅ Cache les sections par défaut */
+.hidden {
+    display: none;
+}
+
+ul {
+    font-weight: normal;
+}

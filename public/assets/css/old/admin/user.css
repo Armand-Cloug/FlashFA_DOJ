@@ -1,0 +1,142 @@
+/* ✅ Fond sombre et structure principale */
+body.user-body {
+    background-color: #0D1424; /* Bleu foncé */
+    color: white;
+    display: flex;
+}
+
+/* ✅ Conteneur principal */
+.main-content {
+    width: calc(100% - 250px); /* Compense la navbar */
+    padding: 20px 40px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* ✅ Titre principal */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ✅ Conteneur du tableau avec scrolling */
+.user-table-container {
+    max-height: 70%px; /* Limite l'affichage à quelques lignes */
+    overflow-y: auto; /* Scroll */
+    border-radius: 8px;
+}
+
+/* ✅ Style des tableaux */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    background-color: #1C2333;
+    margin-top: 10px;
+}
+
+/* ✅ Style des en-têtes */
+.user-table thead {
+    background-color: #2A3A5B;
+    position: sticky;
+    top: 0;
+}
+
+.user-table th, .user-table td {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+/* ✅ Effet au survol */
+.user-table tbody tr:hover {
+    background-color: #232B3B;
+}
+
+/* ✅ Sélecteur de grade */
+.grade-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3A4A6B;
+    color: white;
+    cursor: pointer;
+}
+
+/* ✅ Boutons */
+.update-user-btn {
+    background-color: #1E40AF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.update-user-btn:hover {
+    background-color: #162D6B;
+}
+
+.delete-user-btn {
+    background-color: #AF1E1E;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete-user-btn:hover {
+    background-color: #6B1616;
+}
+
+/* ✅ Personnalisation de la barre de défilement */
+.user-table-container::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre */
+}
+
+.user-table-container::-webkit-scrollbar-track {
+    background: #2A3A5B; /* Couleur du fond de la scrollbar */
+    border-radius: 10px;
+}
+
+.user-table-container::-webkit-scrollbar-thumb {
+    background: #1E40AF; /* Bleu vif cohérent avec le design */
+    border-radius: 10px;
+    border: 3px solid #2A3A5B; /* Bordure pour mieux l'intégrer */
+}
+
+.user-table-container::-webkit-scrollbar-thumb:hover {
+    background: #162D6B; /* Bleu plus foncé au survol */
+}
+
+/* ✅ Adaptabilité sur petits écrans */
+@media screen and (max-width: 768px) {
+    .main-content {
+        width: 95%;
+    }
+
+    .user-table-container {
+        padding: 5px;
+    }
+
+    .user-table td {
+        padding: 10px;
+    }
+}
+
+/* ✅ Barre de recherche */
+#searchBar {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}

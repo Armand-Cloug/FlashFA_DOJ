@@ -1,0 +1,85 @@
+/* ✅ Fond bleu avec le logo DOJ centré */
+body.register-body {
+    background-color: #1E3A8A; /* Bleu foncé */
+    background-image: url('/public/assets/images/doj_logo.png'); /* Logo DOJ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 45%; /* Taille du logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* ✅ Conteneur du formulaire centré */
+.register-container {
+    background: rgba(255, 255, 255, 0.92); /* Fond blanc légèrement plus opaque */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ✅ Titre */
+.register-container h2 {
+    color: #1E3A8A;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* ✅ Champs du formulaire */
+.register-container input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ✅ Bouton */
+.register-container button {
+    width: 100%;
+    padding: 12px;
+    background: #0D1B4C; /* Bleu foncé */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.register-container button:hover {
+    background: #091437;
+}
+
+/* ✅ Lien "Se connecter" */
+.login-link {
+    display: block;
+    margin-top: 15px;
+    color: #0D1B4C;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+

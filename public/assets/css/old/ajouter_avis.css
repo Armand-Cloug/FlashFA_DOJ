@@ -1,0 +1,101 @@
+/* ✅ Fond sombre et texte blanc */
+body.avis-body {
+    background-color: #0D1424;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ✅ Conteneur principal */
+.main-content {
+    width: 90%;
+    max-width: 800px;
+}
+
+/* ✅ Titre */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ✅ Champs de formulaire */
+form {
+    background: #1C2333;
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 70%; /* ✅ Définit une hauteur max pour le formulaire */
+    overflow-y: auto; /* ✅ Active le scroll si nécessaire */
+}
+
+/* ✅ Personnalisation de la scrollbar dans le formulaire */
+form::-webkit-scrollbar {
+    width: 8px;
+}
+
+form::-webkit-scrollbar-track {
+    background: #2A3A5B; /* ✅ Couleur de fond */
+    border-radius: 8px;
+}
+
+form::-webkit-scrollbar-thumb {
+    background: #1E40AF; /* ✅ Bleu */
+    border-radius: 8px;
+    border: 3px solid #2A3A5B; /* Bordure */
+}
+
+form::-webkit-scrollbar-thumb:hover {
+    background: #162D6B; /* ✅ Bleu plus foncé au survol */
+}
+
+/* ✅ Labels */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ✅ Champs input, select et textarea */
+form input, form select, form textarea {
+    width: 98%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background: #232B3B;
+    color: white;
+}
+
+/* ✅ Groupe de checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    background: #232B3B;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* ✅ Bouton Soumettre */
+.btn-submit {
+    background-color: #198754;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #145c37;
+}

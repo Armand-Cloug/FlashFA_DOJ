@@ -1,0 +1,124 @@
+/* ✅ Fond sombre et texte blanc */
+body.profil-body {
+    background-color: #0D1424;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ✅ Conteneur principal */
+.main-content {
+    width: 90%;
+    max-width: 800px;
+}
+
+/* ✅ Titre */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ✅ Champs de formulaire */
+form {
+    background: #1C2333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input, form select, form textarea {
+    width: 98%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    background: #232B3B;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* ✅ Bouton Soumettre */
+.btn-submit {
+    background-color: #198754;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #145c37;
+}
+
+/* ✅ Section des jugements */
+.jugement-section {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    background: #1C2333;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* ✅ Style du tableau */
+.jugement-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* ✅ En-tête du tableau */
+.jugement-section th {
+    background-color: #232B3B;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ✅ Contenu du tableau */
+.jugement-section td {
+    padding: 10px;
+    border-bottom: 1px solid #2E3A4B;
+    text-align: center;
+}
+
+/* ✅ Style des liens DAC / DEF */
+.jugement-section td a {
+    text-decoration: none;
+    color: #198754;
+    font-weight: bold;
+}
+
+.jugement-section td a:hover {
+    text-decoration: underline;
+    color: #145c37;
+}
+
+/* ✅ Ligne survolée */
+.jugement-section tr:hover {
+    background-color: #2A3242;
+}

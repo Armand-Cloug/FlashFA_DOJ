@@ -1,0 +1,198 @@
+/* ✅ Fond sombre et texte blanc */
+body.dossier-body {
+    background-color: #0D1424;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden; /* Empêche le scroll de la page */
+}
+
+/* ✅ Conteneur principal */
+.main-content {
+    width: 90%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+}
+
+/* ✅ Titre */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ✅ Barre de recherche */
+#searchBar {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+/* ✅ Bouton Ajouter */
+.btn-add {
+    background-color: #198754;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.btn-add:hover {
+    background-color: #145c37;
+}
+
+/* ✅ Conteneur du tableau */
+.dossier-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    background: #1C2333;
+    overflow-y: auto; /* Permet le défilement interne dans le tableau */
+    display: block;
+    max-height: 60vh; /* Ajuste la hauteur max */
+}
+
+/* ✅ En-tête du tableau */
+.dossier-table thead {
+    background-color: #232B3B;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* ✅ Contenu du tableau */
+.dossier-table tbody {
+    display: block;
+    overflow-y: auto;
+    max-height: 50vh; /* Ajuste la hauteur max */
+    width: 100%;
+}
+
+/* ✅ Garde les colonnes alignées */
+.dossier-table thead tr, .dossier-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* ✅ Style des colonnes */
+.dossier-table th, .dossier-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ✅ Liens de DAC */
+.affaire-link {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.affaire-link:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Select pour les statuts */
+.statut-select {
+    padding: 6px;
+    font-size: 14px;
+    background: #2A3A5B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* ✅ Personnalisation de la barre de scroll */
+.dossier-table tbody::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre */
+}
+
+.dossier-table tbody::-webkit-scrollbar-track {
+    background: #2A3A5B; /* Couleur de fond */
+    border-radius: 10px;
+}
+
+.dossier-table tbody::-webkit-scrollbar-thumb {
+    background: #1E40AF; /* Bleu vif */
+    border-radius: 10px;
+    border: 3px solid #2A3A5B; /* Bordure */
+}
+
+.dossier-table tbody::-webkit-scrollbar-thumb:hover {
+    background: #162D6B; /* Bleu foncé */
+}
+
+/* ✅ Boutons */
+.btn-update, .btn-edit, .btn-dossier {
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #198754;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #145c37;
+}
+
+.btn-edit {
+    background-color: #FFC107;
+    color: black;
+}
+
+.btn-edit:hover {
+    background-color: #d39e00;
+}
+
+.btn-dossier {
+    background-color: #1E3A8A;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-dossier:hover {
+    background-color: #0D1B4C;
+}
+
+/* ✅ Adaptabilité sur petits écrans */
+@media screen and (max-width: 768px) {
+    .main-content {
+        width: 95%;
+    }
+
+    .dossier-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .dossier-table tbody {
+        max-height: 50vh;
+    }
+
+    .dossier-table td {
+        padding: 10px;
+    }
+}

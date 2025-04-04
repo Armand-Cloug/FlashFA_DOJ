@@ -1,0 +1,151 @@
+/* ✅ Fond sombre pour correspondre au design */
+body.cop-admin-body {
+    background-color: #0D1424; /* Bleu foncé profond */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh; /* Empêche le scroll général */
+    overflow: hidden;
+}
+
+/* ✅ Conteneur principal */
+.main-content {
+    width: 90%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+}
+
+/* ✅ Titre */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ✅ Conteneur du tableau avec scroll */
+.peines-table-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 85%;
+    max-width: 100%;
+    border-radius: 8px;
+    background-color: #1C2333;
+    padding: 10px;
+}
+
+/* ✅ Table des peines */
+.peines-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1C2333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ✅ En-tête du tableau */
+.peines-table thead {
+    background-color: #232B3B;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ✅ Style des colonnes */
+.peines-table thead th {
+    padding: 12px;
+    text-align: center;
+    background-color: #2A3A5B;
+}
+
+/* ✅ Lignes du tableau */
+.peines-table tbody tr {
+    border-bottom: 1px solid #2D3748;
+    transition: background 0.3s;
+}
+
+.peines-table tbody tr:hover {
+    background-color: #232B3B;
+}
+
+/* ✅ Style des cellules */
+.peines-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ✅ Champ de commentaire */
+.commentaire-input {
+    width: 100%;
+    height: 50px;
+    background-color: #3A4A6B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+}
+
+/* ✅ Boutons */
+.update-peine-btn {
+    background-color: #1E40AF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.update-peine-btn:hover {
+    background-color: #162D6B;
+}
+
+.delete-peine-btn {
+    background-color: #AF1E1E;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-peine-btn:hover {
+    background-color: #6B1616;
+}
+
+/* ✅ Scroll personnalisé */
+.peines-table-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.peines-table-container::-webkit-scrollbar-track {
+    background: #2A3A5B;
+    border-radius: 10px;
+}
+
+.peines-table-container::-webkit-scrollbar-thumb {
+    background: #1E40AF;
+    border-radius: 10px;
+    border: 3px solid #2A3A5B;
+}
+
+.peines-table-container::-webkit-scrollbar-thumb:hover {
+    background: #162D6B;
+}
+
+/* ✅ Barre de recherche */
+#searchBar {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}

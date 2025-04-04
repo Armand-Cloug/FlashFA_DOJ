@@ -1,0 +1,37 @@
+/* ✅ Styles du footer */
+.footer {
+    background-color: #0D1424; /* Bleu foncé DOJ */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2%;
+}
+
+/* ✅ Texte centré */
+.footer p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre le texte et le logo */
+}
+
+/* ✅ Logo FlashFA */
+.footer img {
+    height: 20px; /* Taille ajustée pour le logo */
+    vertical-align: middle;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer img:hover {
+    opacity: 1;
+}

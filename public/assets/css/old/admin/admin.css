@@ -1,0 +1,49 @@
+/* ✅ Fond sombre pour correspondre au design */
+body.accueil-body {
+    background-color: #0D1424; /* Bleu foncé profond */
+    color: white;
+    display: flex;
+}
+
+/* ✅ Ajustement du conteneur principal */
+.main-content {
+    width: calc(100% - 250px); /* Compense la largeur de la sidebar */
+    padding: 20px 40px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* ✅ Titre principal */
+.main-content h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ✅ Section contenant les cartes */
+.section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ✅ Style des cartes */
+.card {
+    background-color: #1C2333; /* Fond plus clair */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* ✅ Effet au survol */
+.card:hover {
+    background-color: #232B3B; /* Légèrement plus clair au survol */
+}
+
+ul {
+    font-weight: normal;
+}
